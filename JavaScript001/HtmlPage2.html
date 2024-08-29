@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script>
+        function addNumbers() {
+            var n1 = document.getElementById("txtn1").value;
+            var n2 = document.getElementById("txtn2").value;
+            var res = document.getElementById("txtresult");
+            res.value = parseFloat(n1) + parseFloat(n2);
+        }
+
+        function isNumeric(n) {
+            return !isNaN(n) && isFinite(n);
+
+        }
+
+        function checkID() {
+            var id = document.getElementById("nid");
+            var valid = document.getElementById("valid")
+            if (isNumeric(id) && id.value.length == 14) {
+                valid.innerHTML = "Valid ID Number!"
+            }
+            else { valid.innerHTML = "Invalid ID Number!" }
+            id.style.color = "red";
+            valid.style.color = "red";
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <label>First Number</label>
+    <input type="text" name="name" value="" id="txtn1" /><br />
+    <label>Second Number</label>
+    <input type="text" name="name" value="" id="txtn2" /><br />
+    <button onclick="addNumbers();">Get Summation</button><input type="text" name="name" value="" id="txtresult" /><br />
+
+    <fieldset>
+        ID <input type="text" name="name" value="" id="nid" onblur="checkID();" />
+        <span id="valid"></span><br />
+        Name <input type="text" name="name" value="" id="name" />
+    </fieldset>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>03</th>
+                <th>Mohamed</th>
+                <th>3000</th>
+            </tr>
+            <tr>
+                <th>05</th>
+                <th>Nada</th>
+                <th>7000</th>
+            </tr>
+            <tr>
+                <th>07</th>
+                <th>Islam</th>
+                <th>9000</th>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary">Click</button>
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+
+</body>
+</html>

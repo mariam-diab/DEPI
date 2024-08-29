@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="String.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <label>National ID</label>
+                    <input type="text" id="txtnid" name="nid" value="" onblur="getBirth('txtnid', 'txtbirth')" class="form-control" />
+                    <label>Date of Birth</label>
+                    <input type="text" id="txtbirth" name="birth" value="" class="form-control" />
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <label>Full Name</label>
+            <input type="text" id="textfullname" name="name" value="" onblur="getName('textfullname', 'textfirstname', 'textlastname')"/>
+            <label>First Name</label>
+            <input type="text" id="textfirstname" name="name" value="" />
+            <label>Last Name</label>
+            <input type="text" id="textlastname" name="name" value="" />
+        </div>
+    </div>
+</body>
+</html>

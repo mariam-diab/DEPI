@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function fillDays() {
+            var list = document.getElementById("days");
+            for (var i = 1; i <= 31; i++) {
+                list.innerHTML += '<option>'+ i +'</option>';
+            }
+        }
+        function fillCountry(id) {
+            var list = document.getElementById(id);
+            var country_list = ["EGYPT", "UAE", "USA", "JAPAN"];
+            for (var i = 0; i <= country_list.length; i++) {
+                list.innerHTML += '<option>' + country_list[i] + '</option>';
+            }
+        }
+
+        function createList() {
+            var list = document.createElement('ol');
+            var cities = ["Alexandria", "Tanta", "Cairo", "Giza", "Aswan"];
+            for (var i = 0; i < cities.length; i++) {
+                var item = document.createElement('li');
+                item.innerHTML = cities[i];
+                item.style.color = "red";
+                list.appendChild(item);
+            }
+            document.getElementById("city").appendChild(list);
+        }
+    </script>
+</head>
+<body onload="fillDays(); fillCountry('country')">
+    <select id="days"></select>
+    <select id="country"></select>
+    <button onclick="createList();">Show Cities</button>
+    <div id="city"></div>
+    <hr />
+    <script type="text/javascript">
+        document.writeln("Hello!");
+        document.writeln("<hr />");
+        var a = 10, b = 20;
+        var check = a == b;
+        document.writeln(check);
+        document.writeln("<hr />");
+        var c = 10, d = '10';
+        var ch = c == d;
+        document.writeln(ch);
+    </script>
+
+
+
+
+</body>
+</html>
+

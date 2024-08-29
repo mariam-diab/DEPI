@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script>
+        function mailValidation() {
+            var mail = document.getElementById('txtmail').value;
+            var mailresult = document.getElementById('emailresult');
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (mail.match(emailRegex) == null) {
+                mailresult.innerHTML = 'Invalid E-mail';
+            }
+            else {
+                mailresult.innerHTML = ' ';
+            }
+        }
+        function passValidation() {
+            var pass = document.getElementById('txtpass').value;
+            var passresult = document.getElementById('passresult');
+            var passRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+            if (pass.match(passRegex) == null) {
+                passresult.innerHTML = 'Invalid Password';
+            }
+            else {
+                passresult.innerHTML = ' ';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" id="txtmail" class="form-control" onblur="mailValidation()" />
+                    <span id="emailresult" class="text-danger"></span>
+                    <br />
+                    <label>Password</label>
+                    <input type="text" id="txtpass" class="form-control" onblur="passValidation()"/>
+                    <span id="passresult" class="text-danger"></span>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{ "Courses":[
+{"CourseName":"ABC", "Price":"2300"},
+{"CourseName":"DEF", "Price":"240"},
+{"CourseName":"GHI", "Price":"4600"},
+{"CourseName":"JKL", "Price":"5500"},
+{"CourseName":"MNO", "Price":"4500"}
+]}
