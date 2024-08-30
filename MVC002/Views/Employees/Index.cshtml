@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model IEnumerable<MVC002.Models.Employee>
+
+<h1>Employee List</h1>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Hire Date</th>
+            <th>IsMarried</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.EmployeeID</td>
+                <td>@employee.FirstName</td>
+                <td>@employee.LastName</td>
+                <td>@employee.Position</td>
+                <td>@employee.Salary</td>
+                <td>@employee.HireDate.ToShortDateString()</td>
+                <td>@employee.IsMarried</td>
+            </tr>
+        }
+    </tbody>
+</table>
