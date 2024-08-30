@@ -1,0 +1,45 @@
+﻿
+@{
+    // ViewData["Title"] = "TestRazor";
+    int x = 50, y = 20;
+    int result = x + y;
+    string[] cities = { "Alexandria", "Cairo", "Giza", "Aswan" };
+}
+
+<h1>TestRazor</h1>
+<span>the result is @result</span>
+<br/>
+<span>@x + @y</span>
+<br />
+<span>@(x+y)</span>
+@if(x>y)
+{
+    <p>IS GREATER THAN</p>
+}
+else
+{
+    <p>IS SMALLER THAN</p>
+}
+
+<select>
+    @foreach(var item in cities)
+    {
+        <option>@item</option>
+    }
+</select>
+
+<select>
+    @for (int i = DateTime.Now.Year; i > 1990; i--)
+    {
+        <option value="@i">@i</option>
+    }
+</select>
+
+<h1>My Name is: @ViewBag.Name</h1>
+<ol>
+    @foreach (var std in @ViewBag.Students)
+    {
+        <li>@std</li>
+    }
+</ol>
+

@@ -50,5 +50,13 @@ namespace MCV002.Controllers
             return Json(courses.ToList());
         }
 
+        public IActionResult TestRazor()
+        {
+            ViewBag.Name = "Mariam Diab";
+            string[] std = { "Ahmed", "Mohamed", "Mahmoud", "Ali" };
+            ViewBag.Students = std;
+            return View();
+        }
+
     }
 }
