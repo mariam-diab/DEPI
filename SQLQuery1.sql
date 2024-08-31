@@ -1,0 +1,18 @@
+CREATE DATABASE MVC004;
+GO
+
+USE MVC004;
+GO
+
+CREATE TABLE Categories (
+    CategoryID INT IDENTITY CONSTRAINT Pk_Cat PRIMARY KEY,
+    CategoryName NVARCHAR(50)
+);
+
+CREATE TABLE Products (
+    ProductID INT IDENTITY CONSTRAINT Pk_Pro PRIMARY KEY,
+    ProductName NVARCHAR(30) NOT NULL,
+    UnitPrice DECIMAL(10, 2),
+    Stock INT,
+    CategoryID INT CONSTRAINT fk_Cat FOREIGN KEY REFERENCES Categories(CategoryID)
+);
