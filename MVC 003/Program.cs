@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using MVC_003.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AmazonContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("AmazonDB")));
 
 var app = builder.Build();
 
